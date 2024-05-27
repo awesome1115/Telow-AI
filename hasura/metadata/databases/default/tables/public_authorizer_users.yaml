@@ -1,0 +1,33 @@
+table:
+  name: authorizer_users
+  schema: public
+object_relationships:
+  - name: user_option
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: user_options
+          schema: public
+array_relationships:
+  - name: ga_connects
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: ga_connects
+          schema: public
+  - name: instances
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: instances
+          schema: public
+  - name: openai_assistants
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: openai_assistants
+          schema: public

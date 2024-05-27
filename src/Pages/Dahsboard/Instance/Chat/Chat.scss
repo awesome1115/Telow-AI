@@ -1,0 +1,227 @@
+.main-container {
+  display: block;
+  border: 0;
+  z-index: 0 !important;
+  height: 91vh;
+
+  .cs-message-list {
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+    transition: all 0.3s;
+  }
+
+  .cs-message__content {
+    background: none;
+    border: 0px solid #e2e2e2;
+    border-radius: 7px;
+    color: white;
+    font-size: 16px;
+    padding-left: 0px;
+  }
+
+  .cs-message-input__content-editor-wrapper {
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    border-radius: 50em;
+    background: transparent;
+    padding: 1.25em 1.1em;
+
+    .cs-message-input__content-editor-container,
+    .cs-message-input__content-editor {
+      background: none;
+      color: black;
+      font-size: 16px;
+    }
+    .cs-message-input__content-editor[data-placeholder]:empty:before {
+      color: #afafaf;
+      font-weight: 500;
+    }
+  }
+}
+.cs-message-list .cs-message.cs-message--outgoing,
+.cs-message-list .cs-message-group.cs-message-group--outgoing {
+  transition: all 0.3s;
+  background: none;
+}
+
+.cs-message-list .cs-typing-indicator {
+  background: #ffffff00;
+  color: #fff;
+  font-size: 16px;
+  padding: 1.1em 1.1em;
+}
+
+.cs-message-list__scroll-wrapper > .cs-message:nth-last-child(4) {
+  margin-bottom: 1.65em;
+}
+
+.cs-typing-indicator__text {
+  color: rgb(120, 187, 2, 1);
+}
+.cs-typing-indicator__dot {
+  background: rgb(120, 187, 2, 1);
+}
+.cs-message {
+  max-width: 100% !important;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 85px;
+  padding-right: 85px;
+}
+.scrollbar-container {
+  padding: 0;
+  flex-basis: min-content;
+}
+
+.ps__rail-y:hover > .ps__thumb-y,
+.ps__rail-y:focus > .ps__thumb-y,
+.ps__rail-y.ps--clicking .ps__thumb-y {
+  background-color: #000 !important;
+  width: 7px !important;
+}
+
+.ps__thumb-y {
+  background-color: #dadada !important;
+  width: 7px !important;
+}
+
+.ps .ps__rail-x:hover,
+.ps .ps__rail-y:hover,
+.ps .ps__rail-x:focus,
+.ps .ps__rail-y:focus,
+.ps .ps__rail-x.ps--clicking,
+.ps .ps__rail-y.ps--clicking {
+  background-color: #fafafa !important;
+  width: 12px !important;
+}
+
+.cs-message--incoming {
+  transition: all 0.3s;
+  .cs-message__content-wrapper {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 800px;
+  }
+  .cs-message__content {
+    color: #000;
+  }
+}
+
+.cs-message__custom-content {
+  display: flex;
+  gap: 20px;
+}
+
+.cs-message--outgoing {
+  transition: all 0.3s;
+  .cs-message__content-wrapper {
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .cs-message__content {
+    border: 0px solid #dddddd !important;
+    color: #000;
+  }
+}
+
+.cs-message-input__tools {
+  align-self: center;
+}
+
+.cs-message-input__tools:last-child .cs-button:last-child {
+  background-color: #e8ffbe;
+  color: #000;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-right: 15px;
+}
+
+.cs-message__footer {
+  color: rgb(103 103 103 / 90%) !important;
+}
+
+.cs-message__avatar {
+  justify-content: center;
+}
+
+.cs-chat-container .cs-message-input {
+  border-top: solid 0px #d1dbe3;
+}
+
+.cs-message-list {
+  background: rgb(241, 242, 245);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(241, 242, 245, 1) 0%,
+    rgba(248, 250, 251, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(241, 242, 245, 1) 0%,
+    rgba(248, 250, 251, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(241, 242, 245, 1) 0%,
+    rgba(248, 250, 251, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1f2f5",endColorstr="#f8fafb",GradientType=1);
+  border-radius: 25px;
+  border: 1px solid #f3f4f8;
+}
+.cs-main-container {
+  border: solid 0px #d1dbe3;
+}
+
+::marker {
+  position: inherit;
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  button {
+    display: flex;
+    position: 'absolute';
+    right: 5;
+    top: 5;
+    background:
+      linear-gradient(#f4f5f7, #f4f5f7) padding-box,
+      linear-gradient(60deg, #b4d455, #5ca794) border-box;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    transition: 3s ease !important;
+
+    p {
+      background: linear-gradient(60deg, #b4d455, #5ca794);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  button:hover {
+    background:
+      linear-gradient(#f4f5f7, #f4f5f7) padding-box,
+      linear-gradient(60deg, #9cb42f, #468a7d) border-box;
+  }
+}
+
+.custom-outgoing {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  .cs-message__content-wrapper {
+    background: none;
+    padding-bottom: 0px;
+  }
+}
+
+.custom-incoming {
+  padding-top: 0 !important;
+}

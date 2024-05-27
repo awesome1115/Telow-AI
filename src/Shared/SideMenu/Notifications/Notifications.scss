@@ -1,0 +1,10 @@
+.notifications-menu {
+    background: none !important;
+    color: black !important;
+    &:hover {
+        background-color: none !important;
+    }
+    &:active {
+        background-color: none !important;
+    }
+}

@@ -1,0 +1,41 @@
+table:
+  name: bugs
+  schema: public
+object_relationships:
+  - name: instance
+    using:
+      foreign_key_constraint_on: instance_id
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - created_at
+        - domain
+        - error_code
+        - id
+        - instance_id
+        - language
+        - message
+        - note
+        - resolved
+        - type
+        - url
+      filter:
+        instance:
+          authorizer_user:
+            id:
+              _eq: X-Hasura-User-Id
+    comment: ""
+update_permissions:
+  - role: user
+    permission:
+      columns:
+        - note
+        - resolved
+      filter:
+        instance:
+          authorizer_user:
+            id:
+              _eq: X-Hasura-User-Id
+      check: null
+    comment: ""

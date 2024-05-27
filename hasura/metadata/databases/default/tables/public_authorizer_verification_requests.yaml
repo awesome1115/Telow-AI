@@ -1,0 +1,3 @@
+table:
+  name: authorizer_verification_requests
+  schema: public

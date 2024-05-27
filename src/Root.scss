@@ -1,0 +1,39 @@
+:root {
+  --authorizer-primary-color: #000000 !important;
+  --authorizer-primary-disabled-color: #565656 !important;
+  --authorizer-gray-color: #d1d5db !important;
+  --authorizer-white-color: #ffffff !important;
+  --authorizer-danger-color: #dc2626 !important;
+  --authorizer-success-color: #10b981 !important;
+  --authorizer-text-color: #374151 !important;
+  --authorizer-fonts-font-stack: 'graphie', sans-serif !important;
+  --authorizer-fonts-large-text: 20px !important;
+  --authorizer-fonts-medium-text: 16px !important;
+  --authorizer-fonts-small-text: 14px !important;
+  --authorizer-fonts-tiny-text: 12px !important;
+  --authorizer-radius-card: 5px;
+  --authorizer-radius-button: 5px;
+  --authorizer-radius-input: 5px;
+}
+
+html,
+body,
+#root {
+  background: rgb(92, 95, 83);
+  background: -moz-radial-gradient(
+    circle at 20% center,
+    rgba(92, 95, 83, 1) 0%,
+    rgba(16, 21, 45, 1) 60%
+  );
+  background: -webkit-radial-gradient(
+    circle at 20% center,
+    rgba(92, 95, 83, 1) 0%,
+    rgba(16, 21, 45, 1) 60%
+  );
+  background: radial-gradient(
+    circle at 35% center,
+    rgba(92, 95, 83, 1) 0%,
+    rgba(16, 21, 45, 1) 60%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5c5f53",endColorstr="#10152d",GradientType=1);
+}

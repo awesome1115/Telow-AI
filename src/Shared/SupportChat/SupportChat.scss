@@ -1,0 +1,39 @@
+.woot-widget-bubble {
+  height: 45px !important;
+  width: 45px !important;
+}
+
+.woot-widget-bubble svg {
+  height: 18px !important;
+  margin: 12px !important;
+  width: 18px !important;
+}
+
+.woot--close::before,
+.woot--close::after {
+  height: 16px !important;
+  left: 14px !important;
+  top: 8px !important;
+}
+
+@media only screen and (min-width: 667px) {
+  .woot-widget-holder {
+    bottom: 75px !important;
+  }
+}
+
+.woot-widget-bubble.woot-elements--left {
+  left: 10px !important;
+  bottom: 10px !important;
+}
+
+.woot-widget-bubble {
+  height: 30px !important;
+  width: 30px !important;
+}
+
+.woot-widget-bubble svg {
+  height: 13px !important;
+  margin: 8px !important;
+  width: 12px !important;
+}

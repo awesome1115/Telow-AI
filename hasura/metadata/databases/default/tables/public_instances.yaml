@@ -1,0 +1,88 @@
+table:
+  name: instances
+  schema: public
+object_relationships:
+  - name: authorizer_user
+    using:
+      foreign_key_constraint_on: user_id
+  - name: ga_connect
+    using:
+      foreign_key_constraint_on:
+        column: instance_id
+        table:
+          name: ga_connects
+          schema: public
+array_relationships:
+  - name: bugs
+    using:
+      foreign_key_constraint_on:
+        column: instance_id
+        table:
+          name: bugs
+          schema: public
+  - name: ga_connects
+    using:
+      foreign_key_constraint_on:
+        column: instance_id
+        table:
+          name: ga_connects
+          schema: public
+  - name: openai_assistants
+    using:
+      foreign_key_constraint_on:
+        column: instance_id
+        table:
+          name: openai_assistants
+          schema: public
+insert_permissions:
+  - role: user
+    permission:
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+      columns:
+        - domain
+        - domain_screenshot
+        - status
+        - subscription_id
+        - user_id
+        - created_at
+        - updated_at
+        - id
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - domain
+        - domain_screenshot
+        - status
+        - subscription_id
+        - user_id
+        - created_at
+        - updated_at
+        - id
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+update_permissions:
+  - role: user
+    permission:
+      columns:
+        - domain
+        - domain_screenshot
+        - status
+        - subscription_id
+        - user_id
+        - created_at
+        - updated_at
+        - id
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+      check: null
+delete_permissions:
+  - role: user
+    permission:
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id

@@ -1,0 +1,3 @@
+table:
+  name: authorizer_email_templates
+  schema: public

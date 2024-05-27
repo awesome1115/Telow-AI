@@ -1,0 +1,3 @@
+table:
+  name: authorizer_webhook_logs
+  schema: public
